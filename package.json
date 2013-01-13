@@ -1,0 +1,12 @@
+{
+  "name": "xhr",
+  "version": "0.0.0",
+  "description": "XHR module to really learn streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Jarrett Cruger <jcruger@qrhook.com>",
+  "license": "MIT"
+}
