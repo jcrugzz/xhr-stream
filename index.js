@@ -1,12 +1,21 @@
-// Author: Jarrett Cruger -> QR Hook
+// Author: Jarrett Cruger
 //
 // Module for experimenting with XHR using a stream interface
 
 var readable = require('stream').Readable;
-var util = require('util');
+var inherits = require('inherits');
 
-module.exports = XHR;
+module.exports = function (options, cb) {
+    return new xhr(options, cb);
+};
 
-function XHR () {
+inherits(xhr, readable);
+
+function xhr (options, cb) {
+    readable.call(this);
+
+    var self = this;
+    this.xhr = new XMLHttpRequest();
 
 }
+

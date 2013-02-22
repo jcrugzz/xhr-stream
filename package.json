@@ -1,12 +1,15 @@
 {
-  "name": "xhr",
+  "name": "xhr-stream",
   "version": "0.0.0",
-  "description": "XHR module to really learn streams",
+  "description": "XHR Stream that returns a streams2 readable stream response",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "",
-  "author": "Jarrett Cruger <jcruger@qrhook.com>",
-  "license": "MIT"
+  "author": "Jarrett Cruger <jcrugzz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inherits": "~1.0.0"
+  }
 }
