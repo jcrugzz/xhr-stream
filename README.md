@@ -1,6 +1,6 @@
 xhr-stream
 ===
-Create an XHR request that returns a readable stream response. Based on Streams2
+Create an XHR request that returns a writeable response stream. Based on Streams2
 
 Will only work on current `node 0.9.x` or `0.10` when that comes out
 
@@ -11,6 +11,10 @@ Status
 
 Currently returns a function that does very little for you, wrapping my head
 around the implementation of this streams2 shenanigans.
+
+Hmm I need to figure out how exactly the translation of the `emit('data')` to
+the `emit('readable')` and `stream.read()` scenario. I probably have not fully
+conceptualized this yet. Getting closer...
 
 *MUST MAKE WORK!*
 
