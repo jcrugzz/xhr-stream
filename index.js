@@ -1,18 +1,25 @@
 // Author: Jarrett Cruger
 //
-// Module for experimenting with XHR using a stream interface
+// Module for experimenting with XHR using a streams2 interface
 
 var Request = require('./lib/request');
 
-module.exports = function (options, cb) {
-    return new xhr(options, cb);
-};
-
+module.exports = xhr;
 
 function xhr (options, cb) {
-    var self = this;
-    this.xhr = request()
+    if (typeof options === 'string') {
+        var method = options;
+        options = {
+            method: method
+        }
+    } else if (!options) {
+        options = {};
+    }
+    if (!options.host) options.host = window.location.host.split(':')[0];
+    if (!options.port) options.port = window.location.port;
 
-
+    var req = new Request(new window.XMLHttpRequest, cb);
+    if (cb) req.on('response', cb);
+    return req;
 }
 
