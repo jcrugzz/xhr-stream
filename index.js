@@ -18,7 +18,8 @@ function xhr (options, cb) {
     if (!options.host) options.host = window.location.host.split(':')[0];
     if (!options.port) options.port = window.location.port;
 
-    var req = new Request(new window.XMLHttpRequest, cb);
+    var req = new Request(new window.XMLHttpRequest, options);
+    if (options.method.toLowerCase() === 'get') req.end();
     if (cb) req.on('response', cb);
     return req;
 }
