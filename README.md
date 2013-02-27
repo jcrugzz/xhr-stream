@@ -8,18 +8,16 @@ This is used as an experiment to better teach myself streams2 (reading the [docs
 
 Status
 ------
+Update:
 
-Currently returns a function that does very little for you, wrapping my head
-around the implementation of this streams2 shenanigans.
+So it seems to be working (kind of). I am able to make the request and it
+returns a response but I am unable to get data from calling `var data = res.read()`
+once the stream is `readable`. More investigation is required.
 
-Hmm I need to figure out how exactly the translation of the `emit('data')` to
-the `emit('readable')` and `stream.read()` scenario. I probably have not fully
-conceptualized this yet. Getting closer...
-
-*MUST MAKE WORK!*
 
 ### Materials used: ###
 
+* [@Raynos][raynos] on IRC (Thank you)
 * [Stream Docs][streamDocs]
 * [Binary XHR][binaryXHR] (courtesy of [@maxogden][maxogden])
 * [http-browserify][httpbrowser] (courtesy of [@substack][substack])
@@ -31,3 +29,4 @@ conceptualized this yet. Getting closer...
 [maxogden]: https://github.com/maxogden
 [binaryXHR]: https://github.com/maxogden/binary-xhr/blob/master/index.js
 [streamDocs]: https://github.com/joyent/node/blob/master/doc/api/stream.markdown
+[raynos]: https://github.com/Raynos
