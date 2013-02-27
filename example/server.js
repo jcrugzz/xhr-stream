@@ -3,7 +3,11 @@ var http = require('http');
 var ecstatic = require('ecstatic')(__dirname);
 
 var server = http.createServer(function (req, res) {
-    if (req.url === '/doom') {
+    if (req.url === '/hello') {
+        res.setHeader('contentType', 'text/plain');
+        res.end('hello');
+    } else if (req.url === '/doom') {
+        // Example courtesy of @substack
         res.setHeader('contentType', 'multipart/octet-stream');
 
         res.write('d');
