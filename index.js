@@ -2,6 +2,7 @@
 //
 // Module for experimenting with XHR using a streams2 interface
 
+var EventEmitter = require('events').EventEmitter;
 var Request = require('./lib/request');
 
 module.exports = xhr;
@@ -16,4 +17,3 @@ function xhr (options, cb) {
     if (options.method.toLowerCase() === 'get') req.end();
     return req;
 }
-

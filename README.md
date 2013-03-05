@@ -14,6 +14,9 @@ So it seems to be working (kind of). I am able to make the request and it
 returns a response but I am unable to get data from calling `var data = res.read()`
 once the stream is `readable`. More investigation is required.
 
+I am beginning to think that it could have something to do with how the
+`res._read` function is implemented.
+
 
 ### Materials used: ###
 
